@@ -28,9 +28,7 @@ public class UtilisationDoWhile{
 
 
     public static void main(String []args){
-        char lettre=' '; /*on initialise notre charactère a la valeur voulu, c'est 
-                            à dire 'o', pour rentrer dans la boucle "while" à notre
-                            fonction suivante */
+        char lettre=' ';  // Nous n'avons pas besoin de initialiser le charactère "lettre" car on rentre au moins un fois dans nos boucles.
 
         question(lettre);
 
