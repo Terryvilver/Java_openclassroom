@@ -75,7 +75,10 @@ public class LesTableaux{
 
     }
 
-    static void test3(int test3[], int nombre)
+    static void test3(int test3[], int nombre) /*Fonction permettant de
+                                                chercher si le nombre saisi
+                                                par l'utilisateur est dans
+                                                le tableau. */
     {
 
         int trouve = 0;
@@ -114,12 +117,12 @@ public class LesTableaux{
         System.out.println("\n\nAffichage numéro 3 : ");
         int test3[] = new int[10];
         int nombre = 0; //nombre que l'on recherche dans le tableau.
+        boolean recommencer = true; //variable utilisé pour faire une nouvelle recherche.
 
         //variable permettant de continuer de chercher un nombre.
         Scanner scan = new Scanner(System.in);  
         char car = ' ';
 
-        boolean recommencer = true;
         test3 = create_tab(test3);
         nombre = ask_number();
         test3(test3,nombre);
