@@ -1,3 +1,5 @@
+
+
 public class InsertionSortExample {  
     public static void insertionSort(int tab[]) {   
         for (int i = 1; i < tab.length; i++) 
@@ -14,7 +16,7 @@ public class InsertionSortExample {
     }  
        
     public static void main(String a[]){    
-        int tab[] = {1, 5, 6, 2, 15, 12, 4, 7};    
+        int tab[] = {1, 5, 6, 2, 15, 12, 4, 7, 0};    
         System.out.println("Avant le tri");
 
         for(int i = 0; i < tab.length; i++)
@@ -31,5 +33,6 @@ public class InsertionSortExample {
         {    
             System.out.print(i + " ");    
         }    
+
     }    
 }    
