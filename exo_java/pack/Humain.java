@@ -1,16 +1,16 @@
-
+package pack;
 
 public class Humain{
     /* variable d'instance */
     protected String texte;
 
     /*constructeur */
-    Humain()
+    public Humain()
     {
         texte = "none";
     }
 
-    Humain(String pTexte)
+    public Humain(String pTexte)
     {
         texte = pTexte;
     }
@@ -30,6 +30,6 @@ public class Humain{
     /*Methode d'instance */
     public String toString()
     {
-        return "je suis " + texte;
+        return "je suis " + texte + ".";
     }
 }
