@@ -1,4 +1,4 @@
-//Premier programme récursif, découverte des algos.
+//Premier programme avec une fonction récursif, découverte des algos.
 
 import java.util.Scanner;
 
