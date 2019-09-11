@@ -1,3 +1,6 @@
+/*le but ici est d'apprendre à utiliser le toString, les packages 
+et appréhender la covariance */
+
 import pack.*;
 
 public class Compris{
