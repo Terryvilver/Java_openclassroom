@@ -90,6 +90,7 @@ abstract class Animal
 
 }
 
+
 public class AbstraitMain{
 
     public static void main(String []args)

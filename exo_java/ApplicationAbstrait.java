@@ -116,7 +116,7 @@ class SpeMath extends Etudiant
 
 }
 
-class SpeFrancais extends Etudiant
+class SpeFrancais extends Etudiant implements EtudiantHeureux
 {
     /* CONSTRUCTEUR */
     SpeFrancais()
@@ -172,6 +172,16 @@ class SpeFrancais extends Etudiant
             return df.format(moyenne) + "! Votre année n'est pas validée !";
     }
 
+    public void frimer()
+    {
+        System.out.println(this.prenom + " frime devant ces camarades.");
+    }
+
+    public void crier()
+    {
+        System.out.println(this.prenom + " crie de joie.");
+    }
+
 }
 
 abstract class Etudiant
@@ -218,20 +228,18 @@ abstract class Etudiant
     }
 }
 
+interface EtudiantHeureux{
+    public void frimer();
+    public void crier();
+}
 public class ApplicationAbstrait{
     public static void main(String []args){
-
-        SpePhilo e0 = new SpePhilo("Pierre",8 ,7, 17);
-        e0.aSavoir();
-        e0.setPrenom("lucie"); //affiche Lucie au lieu de Pierre 
-        System.out.println(e0);
-
-        SpeMath e1 = new SpeMath("Jean",8 ,7, 17);
-        System.out.println(e1);
 
         SpeFrancais e2 = new SpeFrancais("Marie", 8, 7, 17);
         e2.setNoteFrancais(15);
         System.out.println(e2);
+        e2.frimer();
+        e2.crier();
 
 
     }
