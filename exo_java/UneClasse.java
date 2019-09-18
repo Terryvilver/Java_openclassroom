@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+
 class Ville{
     private String nomVille;
     private String nomPays;
@@ -17,11 +18,11 @@ class Ville{
         nbreInstance++;
     }
 
-    public Ville(String pNomVille, String pNomPays , int pNbreHabitants){
+    public Ville(String NomVille, String NomPays , int NbreHabitants){
         System.out.println("création d'une ville avec paramètre");
-        nomVille = pNomVille;
-        nomPays = pNomPays;
-        nbreHabitants = pNbreHabitants;
+        this.nomVille = NomVille;
+        this.nomPays = NomPays;
+        this.nbreHabitants = NbreHabitants;
         this.setCategorie();
         nbreInstance++;
     }
@@ -49,17 +50,17 @@ class Ville{
     }
 
     /************ MUTATEUR ***************/
-    public void setNomVille(String pNomVille)
+    public void setNomVille(String NomVille)
     {
-        nomVille = pNomVille;
+        this.nomVille = NomVille;
     }
-    public void setNomPays(String pNomPays)
+    public void setNomPays(String NomPays)
     {
-        nomPays = pNomPays;
+        this.nomPays = NomPays;
     }
-    public void setNombreHabitants(int pNombreHabitants)
+    public void setNombreHabitants(int NombreHabitants)
     {
-        nbreHabitants = pNombreHabitants;
+        this.nbreHabitants = NombreHabitants;
         this.setCategorie();
     }
     private void setCategorie()
@@ -85,7 +86,7 @@ class Ville{
             return v.getNomVille()+" est plus peuplé que "+this.getNomVille();
     }
 
-    public String decrisToi()
+    public String toString()
     {
         return "\t"+this.nomVille+" est une ville de "+this.nomPays+", elle comporte : "+this.nbreHabitants+" habitant(s) => elle est donc de catégorie :"+this.categorie;
     }
@@ -95,19 +96,10 @@ class Ville{
 
 public class UneClasse{
 
-    public static void main(String []args){
-        Scanner scan = new Scanner(System.in);
-        Ville v = new Ville();
+    public static void main(String []args)
+    {
         Ville v1 = new Ville("Paris", "France", 15000);
-        Ville v2 = new Ville("Alger", "Algérie", 15);
-
-        System.out.println(v1.decrisToi());
-        System.out.println(v2.decrisToi());
-
-        System.out.println(v1.comparer(v2));
-
-        System.out.println("nombre de ville : "+v.getnbreInstance());
-
+        System.out.println(v1);
     }
 
 }
